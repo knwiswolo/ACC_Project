@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xcore:AtomicComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xcore="uk.xman.xcore" name="SpeedControl">
+  <services name="SpeedControl">
+    <parameters xsi:type="xcore:Input" name="currentSpeed" dataType="Float" order="1"/>
+    <parameters xsi:type="xcore:Input" name="maxSpeed" dataType="Float" order="1"/>
+    <parameters xsi:type="xcore:Output" name="throttlePosition" dataType="Float" order="1"/>
+  </services>
+  <computationUnit interfaceCode="/*&#xA;&#x9;&#x9;* This is Java interface of the component SpeedControl&#xA;&#x9;&#x9;*/&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;import java.util.*;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;public interface SpeedControl {public  Float  SpeedControl (&#xA;    &#x9;&#x9;Float currentSpeed, &#xA;    &#x9;&#x9;    &#x9;&#x9;Float maxSpeed&#xA;    &#x9;&#x9; ); &#xA;}" sourceCode="/*&#xA;&#x9;&#x9;* This is Java implementation of the atomic component SpeedControl&#xA;&#x9;&#x9;*/&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;import java.util.*;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;public class SpeedControlImpl implements SpeedControl {&#xA;/**&#xA; * Constructor of atomic component SpeedControl&#xA; */&#xA;public SpeedControlImpl() {&#xA;}public  Float  SpeedControl (&#xA;    &#x9;&#x9;Float currentSpeed, &#xA;    &#x9;&#x9;    &#x9;&#x9;Float maxSpeed&#xA;    &#x9;&#x9; ) {&#xA;    &#x9;&#x9;&#x9;Float throttlePosition = null;&#xA;    &#x9;&#x9;&#x9;// TODO: auto-generated code, to be implemented by developers&#xA;    &#x9;&#x9;&#x9;return throttlePosition;&#xA;    &#x9;&#x9;}}"/>
+</xcore:AtomicComponent>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xcore:CompositeComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xcore="uk.xman.xcore" name="ControlSystem">
+  <services>
+    <parameters xsi:type="xcore:Input" name="input"/>
+  </services>
+  <composables xsi:type="xcore:ComponentInstance" name="DistanceControl" componentType="distanceControl">
+    <selectedServices name="DistanceControl">
+      <parameters xsi:type="xcore:Input" name="currentDistance" dataType="Float" order="1"/>
+      <parameters xsi:type="xcore:Input" name="safetyDistance" dataType="Float" order="1"/>
+      <parameters xsi:type="xcore:Output" name="throttlePosition" dataType="Float" dataChannels="//@dataChannels.0" order="1"/>
+    </selectedServices>
+    <componentReference xsi:type="xcore:AtomicComponent" name="distanceControl">
+      <services name="DistanceControl">
+        <parameters xsi:type="xcore:Input" name="currentDistance" dataType="Float" order="1"/>
+        <parameters xsi:type="xcore:Input" name="safetyDistance" dataType="Float" order="1"/>
+        <parameters xsi:type="xcore:Output" name="throttlePosition" dataType="Float" order="1"/>
+      </services>
+      <computationUnit interfaceCode="/*&#xA;&#x9;&#x9;* This is Java interface of the component distanceControl&#xA;&#x9;&#x9;*/&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;import java.util.*;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;public interface distanceControl {public  Integer  SpeedControl (&#xA;    &#x9;&#x9;Integer currentDistance, &#xA;    &#x9;&#x9;    &#x9;&#x9;Integer safetyDistance&#xA;    &#x9;&#x9; ); &#xA;}" sourceCode="/*&#xA;&#x9;&#x9;* This is Java implementation of the atomic component distanceControl&#xA;&#x9;&#x9;*/&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;import java.util.*;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;public class distanceControlImpl implements distanceControl {&#xA;/**&#xA; * Constructor of atomic component distanceControl&#xA; */&#xA;public distanceControlImpl() {&#xA;}public  Integer  SpeedControl (&#xA;    &#x9;&#x9;Integer currentDistance, &#xA;    &#x9;&#x9;    &#x9;&#x9;Integer safetyDistance&#xA;    &#x9;&#x9; ) {&#xA;    &#x9;&#x9;&#x9;Integer throttlePosition = null;&#xA;    &#x9;&#x9;&#x9;// TODO: auto-generated code, to be implemented by developers&#xA;    &#x9;&#x9;&#x9;return throttlePosition;&#xA;    &#x9;&#x9;}}"/>
+    </componentReference>
+  </composables>
+  <composables xsi:type="xcore:ComponentInstance" name="SpeedControl" componentType="SpeedControl">
+    <selectedServices name="SpeedControl">
+      <parameters xsi:type="xcore:Input" name="currentSpeed" dataType="Float" dataChannels="//@dataChannels.0" order="1"/>
+      <parameters xsi:type="xcore:Input" name="maxSpeed" dataType="Float" order="1"/>
+      <parameters xsi:type="xcore:Output" name="throttlePosition" dataType="Float" order="1"/>
+    </selectedServices>
+    <componentReference xsi:type="xcore:AtomicComponent" name="SpeedControl">
+      <services name="SpeedControl">
+        <parameters xsi:type="xcore:Input" name="currentSpeed" dataType="Float" order="1"/>
+        <parameters xsi:type="xcore:Input" name="maxSpeed" dataType="Float" order="1"/>
+        <parameters xsi:type="xcore:Output" name="throttlePosition" dataType="Float" order="1"/>
+      </services>
+      <computationUnit interfaceCode="/*&#xA;&#x9;&#x9;* This is Java interface of the component SpeedControl&#xA;&#x9;&#x9;*/&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;import java.util.*;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;public interface SpeedControl {public  Float  SpeedControl (&#xA;    &#x9;&#x9;Float currentSpeed, &#xA;    &#x9;&#x9;    &#x9;&#x9;Float maxSpeed&#xA;    &#x9;&#x9; ); &#xA;}" sourceCode="/*&#xA;&#x9;&#x9;* This is Java implementation of the atomic component SpeedControl&#xA;&#x9;&#x9;*/&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;import java.util.*;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;public class SpeedControlImpl implements SpeedControl {&#xA;/**&#xA; * Constructor of atomic component SpeedControl&#xA; */&#xA;public SpeedControlImpl() {&#xA;}public  Float  SpeedControl (&#xA;    &#x9;&#x9;Float currentSpeed, &#xA;    &#x9;&#x9;    &#x9;&#x9;Float maxSpeed&#xA;    &#x9;&#x9; ) {&#xA;    &#x9;&#x9;&#x9;Float throttlePosition = null;&#xA;    &#x9;&#x9;&#x9;// TODO: auto-generated code, to be implemented by developers&#xA;    &#x9;&#x9;&#x9;return throttlePosition;&#xA;    &#x9;&#x9;}}"/>
+    </componentReference>
+  </composables>
+  <dataChannels source="//@composables.0/@selectedServices.0/@parameters.2" target="//@composables.1/@selectedServices.0/@parameters.0"/>
+</xcore:CompositeComponent>
