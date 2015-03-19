@@ -17,10 +17,12 @@ public class SpeedControlImpl implements SpeedControl {
 	
 	public Float SpeedControl (Float currentSpeed, Float maxSpeed) {
 		
+		Float finalSpeed = null;
 		
-		Float throttlePosition = null;
+		//finalSpeed = currentSpeed + (acceleration*time)
 		
-	    return throttlePosition;
+		
+	    return finalSpeed;
 	}
 	
 	public Float calculateThrottlePosition(){

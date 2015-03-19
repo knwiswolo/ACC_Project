@@ -18,14 +18,17 @@ public class DistanceControlImpl implements DistanceControl {
 	
 	public Float DistanceControl (Float currentDistance, Float safetyDistance) {
 		
+		Float displacement = null;
+		
+		//displacement = (currentSpeed*time) + (0.5*acceleration*Math.pow(time,2));
+		
 		// difference btw set safety distance and current distance
 	    Float distanceDifference = currentDistance - safetyDistance; 
 	    return distanceDifference;
 	}
 	
-	public Float calculateThrottlePosition(){
+	public Float calculateThrottlePosition(Float currentSpeed, Float maxSpeed){
 		Float throttlePosition = null;
-		
 		
 		return throttlePosition;
 	}

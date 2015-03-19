@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xcore:AtomicComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xcore="uk.xman.xcore" name="SpeedSensorSimulator">
+  <services name="SpeedSensorSimulator">
+    <parameters xsi:type="xcore:Output" name="currentSpeed" dataType="Float" order="1"/>
+  </services>
+  <computationUnit interfaceCode="/*&#xA;&#x9;&#x9;* This is Java interface of the component SpeedSensorSimulator&#xA;&#x9;&#x9;*/&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;import java.util.*;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;public interface SpeedSensorSimulator {public  Float  SpeedSensorSimulator (&#xA; ); &#xA;}" sourceCode="/*&#xA;&#x9;&#x9;* This is Java implementation of the atomic component SpeedSensorSimulator&#xA;&#x9;&#x9;*/&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;import java.util.*;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;public class SpeedSensorSimulatorImpl implements SpeedSensorSimulator {&#xA;/**&#xA; * Constructor of atomic component SpeedSensorSimulator&#xA; */&#xA;public SpeedSensorSimulatorImpl() {&#xA;}public  Float  SpeedSensorSimulator (&#xA; ) {&#xA;    &#x9;&#x9;&#x9;Float currentSpeed = null;&#xA;    &#x9;&#x9;&#x9;// TODO: auto-generated code, to be implemented by developers&#xA;    &#x9;&#x9;&#x9;return currentSpeed;&#xA;    &#x9;&#x9;}}"/>
+</xcore:AtomicComponent>

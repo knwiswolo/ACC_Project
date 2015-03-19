@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xcore:AtomicComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xcore="uk.xman.xcore" name="BrakeSystem">
+  <services name="applyBrakes">
+    <parameters xsi:type="xcore:Input" name="throttlePosition" dataType="Float" order="1"/>
+    <parameters xsi:type="xcore:Input" name="currentSpeed" dataType="Float" order="1"/>
+  </services>
+  <computationUnit interfaceCode="/*&#xA;&#x9;&#x9;* This is Java interface of the component BrakeSystem&#xA;&#x9;&#x9;*/&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;import java.util.*;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;public interface BrakeSystem {public  void  applyBrakes (&#xA;    &#x9;&#x9;Float throttlePosition, &#xA;    &#x9;&#x9;    &#x9;&#x9;Float currentSpeed&#xA;    &#x9;&#x9; ); &#xA;}" sourceCode="/*&#xA;&#x9;&#x9;* This is Java implementation of the atomic component BrakeSystem&#xA;&#x9;&#x9;*/&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;import java.util.*;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;public class BrakeSystemImpl implements BrakeSystem {&#xA;/**&#xA; * Constructor of atomic component BrakeSystem&#xA; */&#xA;public BrakeSystemImpl() {&#xA;}public  void  applyBrakes (&#xA;    &#x9;&#x9;Float throttlePosition, &#xA;    &#x9;&#x9;    &#x9;&#x9;Float currentSpeed&#xA;    &#x9;&#x9; ) {&#xA;    &#x9;&#x9;&#x9;// TODO: auto-generated code, to be implemented by developers&#xA;    &#x9;&#x9;}}"/>
+</xcore:AtomicComponent>
