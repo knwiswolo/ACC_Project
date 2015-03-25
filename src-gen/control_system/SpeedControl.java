@@ -5,5 +5,6 @@ package control_system;
 		
 				
 public interface SpeedControl {
-	public Float SpeedControl (Float currentDistance, Float safetyDistance); 
+	public Float speedControl (Float currentSpeed, Float cruiseControlSpeed, Float distanceFromLeadingVehicle, Float distanceFromSafetyDistance, Float safetyDistance); 
+	public Float calculateThrottlePosition();
 }

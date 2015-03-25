@@ -8,7 +8,7 @@ package notification;
  *
  */
 public class Notification {
-
+	
 	public void greenNotification(){
 		System.out.println("---------------");
 		System.out.println("OK Distance."); // reach/maintain Cruise Control Speed
@@ -17,7 +17,7 @@ public class Notification {
 
 	public void amberNotification(){
 		System.out.println("---------------------------------------------");
-		System.out.println("Approaching Safety Distance!! - DECELERATE."); // signal to throttle for DECELERATION
+		System.out.println("Approaching Safety Distance!! - DECELERATE."); // signal to accelerator for DECELERATION
 		System.out.println("---------------------------------------------");
 	}
 	

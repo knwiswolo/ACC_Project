@@ -5,7 +5,7 @@ package actuators;
 		
 public interface Accelerator {
 	
-	public  void  Accelerate (Float throttlePosition, Float currentSpeed); 
-	public  void  Decelerate (Float throttlePosition, Float currentSpeed);
+	public  Float  accelerate (Float throttlePosition, Float currentSpeed); 
+	public  Float  decelerate (Float throttlePosition, Float currentSpeed);
 	
 }

@@ -15,7 +15,7 @@
     <properties key="IS_SHAPE_FROM_DSL" value="true"/>
     <properties key="current-height-shape" value="150"/>
     <properties key="current-width-shape" value="200"/>
-    <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="200" height="194" x="131" y="76" style="//@styles.0"/>
+    <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="200" height="194" style="//@styles.0"/>
     <link>
       <businessObjects href="ControlSystem.composite#//@composables.0"/>
     </link>
@@ -343,7 +343,7 @@
     <properties key="IS_SHAPE_FROM_DSL" value="true"/>
     <properties key="current-height-shape" value="150"/>
     <properties key="current-width-shape" value="200"/>
-    <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="200" height="194" x="341" y="76" style="//@styles.0"/>
+    <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="200" height="194" x="220" style="//@styles.0"/>
     <link>
       <businessObjects href="ControlSystem.composite#//@composables.1"/>
     </link>
@@ -663,11 +663,6 @@
   </children>
   <styles background="//@colors.1" foreground="//@colors.2" lineWidth="1" filled="true" lineVisible="true" transparency="0.0" id="DefaultSprayStyle" description="This is the default Style definition for Spray" font="//@fonts.2" stretchH="false" stretchV="false" proportional="false"/>
   <styles background="//@colors.1" foreground="//@colors.3" lineWidth="2" filled="true" lineVisible="true" transparency="0.0" id="Component" description="" font="//@fonts.1"/>
-  <styles background="//@colors.1" foreground="//@colors.7" lineWidth="2" filled="true" lineVisible="true" transparency="0.0" id="SequencerNoBgd" description="" font="//@fonts.0"/>
-  <styles foreground="//@colors.2" lineWidth="1" filled="false" lineVisible="true" transparency="0.0" id="SequencerTextStyle" description="" font="//@fonts.3"/>
-  <styles background="//@colors.1" foreground="//@colors.8" lineWidth="2" filled="true" lineVisible="true" transparency="0.0" id="SelectorNoBgd" description="" font="//@fonts.0"/>
-  <styles foreground="//@colors.2" lineWidth="1" filled="false" lineVisible="true" transparency="0.0" id="SelectorTextStyle" description="" font="//@fonts.3"/>
-  <styles background="//@colors.1" foreground="//@colors.6" lineWidth="1" lineStyle="DASH" filled="true" lineVisible="true" transparency="0.0" id="DataChannel" description="" font="//@fonts.0"/>
   <colors red="249" green="238" blue="227"/>
   <colors red="255" green="255" blue="255"/>
   <colors/>
@@ -675,10 +670,7 @@
   <colors red="192" green="192" blue="192"/>
   <colors green="127"/>
   <colors blue="255"/>
-  <colors red="230" green="230"/>
-  <colors red="255" green="112" blue="34"/>
   <fonts name="Arial" size="8"/>
   <fonts name="Arial" size="12" bold="true"/>
   <fonts name="Arial" size="10" bold="true"/>
-  <fonts name="Arial" size="10"/>
 </pi:Diagram>

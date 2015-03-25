@@ -3,5 +3,5 @@ package simulators;
 		*/
 			
 public interface RadarSimulator {
-	public  Float  RadarSimulator (); 
+	public  Float  simulateRadar (); 
 }

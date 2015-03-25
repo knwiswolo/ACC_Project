@@ -12,7 +12,7 @@ public class SpeedSensorSimulatorImpl implements SpeedSensorSimulator {
 	// Constructor of atomic component SpeedSensorSimulator
 	public SpeedSensorSimulatorImpl() {}
 	
-	public Float SpeedSensorSimulator() {
+	public Float simulateSpeedSensor() {
 		Float currentSpeed = null;
 		
 		float min = 20;

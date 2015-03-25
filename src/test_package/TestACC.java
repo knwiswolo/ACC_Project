@@ -5,10 +5,13 @@ package test_package;
 
 import java.util.Scanner;
 
-import notification.NotificationFactory;
+import actuators_impl.AcceleratorImpl;
+import actuators_impl.BrakeSystemImpl;
 import control_system_impl.DistanceControlImpl;
+import control_system_impl.SpeedControlImpl;
 import simulators_impl.RadarSimulatorImpl;
 import simulators_impl.SpeedSensorSimulatorImpl;
+import throttle.Throttle;
 
 /**
  * @author knwiswolo
@@ -26,37 +29,36 @@ public class TestACC {
 		
 		RadarSimulatorImpl radarSimulator = new RadarSimulatorImpl();
 		DistanceControlImpl distanceControl = new DistanceControlImpl();
-		NotificationFactory notification = new NotificationFactory();
+		//NotificationFactory notification = new NotificationFactory();
 		SpeedSensorSimulatorImpl speedSimulator = new SpeedSensorSimulatorImpl();
-		
-		System.out.println("-------------------------");
-		System.out.println("START SIMULATION: <start>");
-		System.out.println("-------------------------");
+		SpeedControlImpl speedControl = new SpeedControlImpl();
+		AcceleratorImpl accelerator = new AcceleratorImpl();
+		BrakeSystemImpl brake = new BrakeSystemImpl();
+		Throttle throttle = new Throttle();
+	
+		Float currentSpeed = speedSimulator.simulateSpeedSensor();
+		distanceFromLeadingVehicle = radarSimulator.simulateRadar();		
 		
 		while (true){
 			
-			try{
-			scanner = new Scanner(System.in);
-			String input;
-			input = scanner.nextLine();
+			System.out.println("-------------------------");
+			System.out.println("Current Speed of Vehicle: " + currentSpeed + " m/s.");
+			System.out.println("Distance from Leading Vehicle: " + distanceFromLeadingVehicle + " m");
+			System.out.println("-------------------------");
 			
-			if(input.equalsIgnoreCase("start")){
-				
+			// ask to Switch on ACC.
+			System.out.println("Press 'ON' to activate ACC.");
+			System.out.println("-------------------------");
+			
+			try{
+				scanner = new Scanner(System.in);
+				String input;
+				input = scanner.nextLine();
+							
 				/**start simulation
 				ACC vehicle is moving at randomly generated speed. - ACC OFF.
 				- show current speed.
 				*/
-				
-				Float initialSpeed = speedSimulator.SpeedSensorSimulator();
-				System.out.println("-------------------------");
-				System.out.println("Current Speed of Vehicle: " + initialSpeed + " m/s.");
-				System.out.println("-------------------------");
-				
-				// ask to Switch on ACC.
-				
-				System.out.println("Press 'ON' to activate ACC.");
-				System.out.println("-------------------------");
-				input = scanner.nextLine();
 				
 				if(input.equalsIgnoreCase("ON")){
 					
@@ -89,25 +91,22 @@ public class TestACC {
 					
 					if(input.equals("")){
 						
-						distanceFromLeadingVehicle = radarSimulator.RadarSimulator();
-						distanceFromSafetyDistance = distanceControl.DistanceControl(distanceFromLeadingVehicle, safetyDistance);
+						input = scanner.nextLine();
 						
-						for(float i = (distanceFromLeadingVehicle-1); i >0; i--){
-							try{
-								Thread.sleep(1000);
-								distanceFromLeadingVehicle--;
-								distanceFromSafetyDistance--;
-								System.out.println("Distance from Leading Vehicle: " + distanceFromLeadingVehicle + "m");
-								System.out.println("Distance Gap (distance from safety distance): " + distanceFromSafetyDistance + "m");
-								notification.createNotification(distanceFromLeadingVehicle, safetyDistance);
-							}
-							catch(InterruptedException ex){ex.printStackTrace();}
+						if(input.equalsIgnoreCase("A")){
+							accelerator.accelerate(throttle.getThrottlePostion(), currentSpeed);
 						}
+						else if(input.equalsIgnoreCase("B")){
+							brake.applyBrakes(throttle.getThrottlePostion(), currentSpeed);
+						}
+						
+						distanceFromSafetyDistance = distanceControl.calculateDistanceFromSafetyDistance(distanceFromLeadingVehicle, safetyDistance);
+						speedControl.speedControl(currentSpeed, cruiseControlSpeed, distanceFromLeadingVehicle, distanceFromSafetyDistance, safetyDistance);
 						
 					}
 										
 				}
-			}
+			//}
 		}catch(Exception ex){ex.printStackTrace();}}
 		
 

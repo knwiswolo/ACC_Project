@@ -11,7 +11,7 @@ public class RadarSimulatorImpl implements RadarSimulator {
 	// Constructor of atomic component RadarSimulator
 	public RadarSimulatorImpl() {}
 	
-	public  Float  RadarSimulator () {
+	public  Float  simulateRadar () {
 		
 		Float relativeDistance = null;
 		// TODO: auto-generated code, to be implemented by developers
