@@ -27,6 +27,7 @@ public class SpeedControlImpl implements SpeedControl {
 					System.out.println("Current Speed: " + currentSpeed + " m/s");
 					System.out.println("Distance from Leading Vehicle: " + distanceFromLeadingVehicle + "m");
 					System.out.println("Distance Gap (distance from safety distance): " + distanceFromSafetyDistance + "m");
+					
 					notification.createNotification(distanceFromLeadingVehicle, safetyDistance);
 				}
 				catch(Exception ex){ex.printStackTrace();}
